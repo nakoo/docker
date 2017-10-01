@@ -4,6 +4,6 @@ RUN echo 'gem: --no-document' >> ~/.gemrc
 
 RUN apk update && \
  apk upgrade && \
- apk add git ruby build-base libxml2-dev libxslt-dev libffi-dev
+ apk add build-base git ruby ruby-dev libxslt-dev libffi-dev
 RUN npm install -g yarn --no-progress
 RUN gem install bundler --pre
