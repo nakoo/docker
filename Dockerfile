@@ -1,7 +1,7 @@
 FROM mhart/alpine-node:latest
 
 RUN mkdir -p /usr/local/etc \
- && echo 'gem: --no-document' >> /usr/local/etc/gemrc
+ && echo 'gem: --no-ri --no-rdoc' >> /usr/local/etc/gemrc
 
 RUN apk update && \
  apk upgrade && \
