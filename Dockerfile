@@ -4,6 +4,6 @@ RUN echo 'gem: --no-document' >> ~/.gemrc
 
 RUN apk update && \
  apk upgrade && \
- apk add git ruby ragel
+ apk add git ruby ruby-dev build-base
 RUN npm install -g yarn --no-progress
 RUN gem install bundler --pre
