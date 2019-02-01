@@ -9,9 +9,6 @@ ENV RAILS_ENV=development
 
 COPY . /usr/src/app
 
-RUN cd /usr/src/app \
-    && bundle install --no-color
-
 WORKDIR /usr/src/app
 EXPOSE 3000
 CMD ["bundle", "exec", "rake", "server"]
