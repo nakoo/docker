@@ -2,7 +2,7 @@ FROM ruby:2.6-alpine
 
 RUN mkdir /usr/src/app \
     && chown $(id -un):$(id -gn) /usr/src/app \
-    && apk add --no-cache build-base \
+    && apk add --no-cache ruby-nokogiri \
     && gem install bundler
 
 ENV RAILS_ENV=development
