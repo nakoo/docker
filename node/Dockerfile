@@ -1,8 +1,6 @@
 FROM nakoo/docker:ruby
 
-RUN mkdir /usr/src/app \
-    && chown $(id -un):$(id -gn) /usr/src/app \
-    && apk add --no-cache nodejs nodejs-npm \
+RUN apk add --no-cache nodejs nodejs-npm \
     && curl -o- -L https://yarnpkg.com/install.sh | bash
 
 ARG NODE_ENV
