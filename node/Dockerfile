@@ -1,8 +1,8 @@
 FROM nakoo/docker:ruby
 
-RUN apk add --no-cache bash nodejs nodejs-npm yarn
+RUN apk add --no-cache nodejs nodejs-npm yarn
 
-ARG NODE_ENV
+ARG NODE_ENV=production
 ENV NODE_ENV $NODE_ENV
 
 COPY . /usr/src/app
