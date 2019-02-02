@@ -1,7 +1,6 @@
 FROM nakoo/docker:ruby
 
-RUN apk add --no-cache bash nodejs nodejs-npm \
-    && curl -o- -L https://yarnpkg.com/install.sh | bash -s -- --rc
+RUN apk add --no-cache bash nodejs nodejs-npm yarn
 
 ARG NODE_ENV
 ENV NODE_ENV $NODE_ENV
